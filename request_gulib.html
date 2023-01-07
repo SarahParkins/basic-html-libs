@@ -1,0 +1,11 @@
+// Fetch the HTML library
+fetch('https://raw.githubusercontent.com/SarahParkins/basic-html-libs/main/GuLib.html')
+  .then(response => response.text())
+  .then(html => {
+    // Create a new script element
+    const script = document.createElement('script');
+    // Add the HTML library to the script element
+    script.innerHTML = html;
+    // Add the script element to the page
+    document.body.appendChild(script);
+  });
